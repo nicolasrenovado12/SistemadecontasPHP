@@ -1,4 +1,5 @@
-<?php
+<?
+
 // Incluir o arquivo de configuração do banco de dados
 require_once 'config.php';
 
@@ -68,17 +69,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
             $sqlrequire = "INSERT INTO users (id,email,username, passwordd) VALUES ('$id','$email','$username', '$password')";
 
-
-            $conn->query($sqlrequire);
+            $conn->query($stmt);
         }
 
     }
     
 }
-
-if (isset($_POST['palavrassenha'])) {
-    echo "baby";
-} 
 
 ?>
 <!DOCTYPE html>
